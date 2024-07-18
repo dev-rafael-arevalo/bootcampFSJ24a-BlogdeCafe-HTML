@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+}
+
+.header nav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog, .courses {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.blog h2, .courses h2 {
+    text-align: center;
+}
+
+.blog-posts, .course-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.blog-post, .course {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+.blog-post img, .course img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-post h3, .course h3 {
+    margin: 10px 0;
+}
+
+.blog-post p, .course p {
+    margin: 10px 0;
+}
+
+.blog-post a, .course a {
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: left;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .header-text h1 {
+        font-size: 1rem;
+    }
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    .blog-posts, .course-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header-text h1 {
+        font-size: 3rem;
+    }
+    .main-content {
+        grid-template-columns: 3fr 1fr;
+    }
+    .blog-posts, .course-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
