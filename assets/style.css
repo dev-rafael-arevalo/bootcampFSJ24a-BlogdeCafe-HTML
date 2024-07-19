@@ -1,23 +1,25 @@
-/** pseudoclase, asigna variables predefinidas */
+/** Pseudoclase para variables predefinidas */
 :root {
-    --color-primario: ##000;
+    --color-primario: #000;
     --color-secundario: #a26e3e;
     --blanco: #FFF;
 }
 
-/** selector universal */
+/** Selector universal para eliminar márgenes y padding predeterminados */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/** Estilos generales del cuerpo */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
+/** Contenedor de navegación */
 .nav-contenedor {
     display: flex;
     justify-content: space-between;
@@ -29,27 +31,26 @@ body {
     z-index: 10;
 }
 
+/** Estilos del logo */
 .logo h1 {
     color: var(--blanco);
-    margin: 0;
 }
 
+/** Menú de navegación */
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
 
-nav ul li {
-    display: inline;
-}
-
+/** Enlaces de navegación */
 .nav-link {
     text-decoration: none;
     color: var(--blanco);
     font-weight: bold;
 }
 
+/** Estilos del banner */
 .banner {
     position: relative;
     width: 100%;
@@ -60,83 +61,84 @@ nav ul li {
     justify-content: center;
 }
 
+/** Texto dentro del banner */
 .banner-texto {
     text-align: center;
     color: var(--blanco);
     padding: 1rem;
-    border-radius: 0px;
 }
 
+/** Tamaño del título en el banner */
 .banner-texto h2 {
     font-size: 2.5rem;
-}
-
-.banner-texto p {
-    margin: 0;
-    font-size: 1.2rem;
 }
 
 main {
     padding: 2rem;
 }
 
-.left-aligned {
+/** Texto alineado a la izquierda */
+.texto-izquierda {
     text-align: left;
     margin-bottom: 1rem;
 }
 
-.blog-grid {
+/** Diseño de grid para la sección del blog */
+.grid-blog {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
 }
 
-.blog-item {
+/** Estilos de los elementos del blog */
+.item-blog {
     background-color: #fff;
-
 }
 
-.blog-item img {
+.item-blog img {
     width: 100%;
-    height: 800;
+    height: 800px;
     object-fit: cover;
 }
 
-.blog-content {
+.contenido-blog {
     padding: 1rem;
 }
 
-.course-info {
+/** Información de cursos */
+.info-cursos {
     display: flex;
     flex-direction: column;
     gap: .2rem;
 }
 
-.course-item {
+.item-curso {
     background-color: #fff;
     text-align: left;
 }
 
+/** Encabezados */
 h2 {
     text-align: center;
-    font-size:2rem;
+    font-size: 2rem;
 }
 
 h3 {
-    
     color: var(--color-primario);
-    font-size:1.8rem;
+    font-size: 1.8rem;
 }
 
+/** Estilos para los párrafos */
 p {
     margin: 1rem 0;
-    font-size:1.5rem;
+    font-size: 1.5rem;
 }
 
+/** Estilos del botón */
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #000;
+    background-color: var(--color-primario);
     color: var(--blanco);
     text-decoration: none;
     border-radius: 5px;
@@ -145,19 +147,60 @@ p {
     text-align: center;
 }
 
+/* Estilos específicos para la tabla de cursos */
+.tabla-cursos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    min-width: 400px;
+}
+
+.tabla-cursos th, .tabla-cursos td {
+    padding: 1rem;
+    text-align: left;
+}
+
+.tabla-cursos th {
+    background-color: var(--color-secundario);
+    color: var(--blanco);
+}
+
+.tabla-cursos tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-cursos tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.tabla-cursos tr:last-of-type {
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+.tabla-cursos .imagen img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/** Estilos del pie de página */
 footer {
-    background-color: #000;
+    background-color: var(--color-primario);
     color: var(--blanco);
     text-align: left;
     padding: 1rem 2rem;
 }
 
+/** Media querys */
 @media (max-width: 768px) {
     .blog-grid {
         grid-template-columns: 1fr;
     }
 
-    .nav-container {
+    .nav-contenedor {
         flex-direction: column;
         gap: 1rem;
     }
@@ -169,4 +212,16 @@ footer {
     .banner-texto p {
         font-size: 1rem;
     }
+
+    .tabla-cursos th, .tabla-cursos td {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .tabla-cursos .imagen img {
+        width: 50px;
+        height: 50px;
+    }
 }
+
+/*TODO #1:*/
